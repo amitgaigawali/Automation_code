@@ -12,9 +12,14 @@ sleep(5)
 action = ActionChains(driver)
 tender=driver.find_element(By.XPATH,'//li[@id="menu-629"]')
 
-AWARD_LETTER=driver.find_element(By.ID,'menusys676')
+AIIMS_Tenders=driver.find_element(By.XPATH,"(//span[text()='AIIMS Tenders'])[1]")
 sleep(5)
-action.move_to_element(tender).move_to_element(AWARD_LETTER).click().perform()
+
+action.move_to_element(tender).perform()
+
+sleep(3)
+
+action.move_to_element(AIIMS_Tenders).click().perform()
 sleep(3)
 
 
